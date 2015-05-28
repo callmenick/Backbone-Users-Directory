@@ -2,10 +2,11 @@
 
 Building a users directory with Backbone. Functionalities:
 
-1. retrieving and outputting users
-2. sorting users
-3. single view of users (still in development)
-4. adding, editing, and deleting users (still in development)
+1. Set up, retrieving, and outputting users
+2. Refactoring the app, and implementing sorting
+3. Searching/filtering the users list (coming soon)
+4. Adding, editing, and deleting users (coming soon)
+5. Single view of users (coming soon)
 
 [Demo here](http://callmenick.com/_development/backbonejs/users-directory/).
 
