@@ -29,9 +29,7 @@ var UsersCollection = Backbone.Collection.extend({
 
   url: 'assets/users.json',
 
-  comparator: function(model) {
-    return model.get('firstname').toLowerCase();
-  }
+  comparator: 'firstname'
 
 });
 
