@@ -95,18 +95,9 @@ var UserView = Backbone.View.extend({
 
   template: _.template($('#user-template').html()),
 
-  events: {
-    'click .users__action--delete': 'deleteUser'
-  },
-
   render: function() {
     this.$el.html(this.template(this.model.attributes));
     return this;
-  },
-
-  deleteUser: function(e) {
-    e.preventDefault();
-    console.log('delete ' + this.model.get('firstname'));
   }
 
 });
