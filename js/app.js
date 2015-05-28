@@ -72,7 +72,6 @@ var UsersView = Backbone.View.extend({
   },
 
   sortCollection: function(e) {
-    console.log(e.target.value);
     Users.comparator = e.target.value;
     Users.sort();
   }
