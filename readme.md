@@ -3,7 +3,7 @@
 Building a users directory with Backbone. Functionalities:
 
 1. retrieving and outputting users
-2. sorting users (still in development)
+2. sorting users
 3. single view of users (still in development)
 4. adding, editing, and deleting users (still in development)
 
