@@ -9,25 +9,32 @@
 </head>
 <body>
   
-<header>
+<header class="header">
   <div class="container">
-    <h1>Users Directory With Backbone</h1>
-    <p>A little experiment on generating a users directory with BackboneJS and JSON data. <a href="http://callmenick.com/post/building-backbone-users-directory-part-1">View the tutorial here</a>.</p>
+    <h1 class="header__title">Users Directory With Backbone</h1>
+    <p class="header__sub-title">A little experiment on generating a users directory with BackboneJS and JSON data. <a href="http://callmenick.com/post/building-backbone-users-directory-part-1">View the tutorial here.</a></p>
   </div>
 </header><!-- /header -->
 
-<main>
+<main class="main">
   <div class="container">
     
     <div id="users">
-      <form id="users-sort" action="#">
+      
+      <form action="#" id="users-sort" class="users-sort">
         <label for="sort">Sort by:</label>
         <select name="sort" id="sort">
           <option value="firstname">First name</option>
           <option value="lastname">Last name</option>
           <option value="email">Email address</option>
         </select>
-      </form><!-- /#users-sort -->
+      </form><!-- /users-sort -->
+
+      <form action="#" id="users-search" class="users-search">
+        <label for="search">Search users:</label>
+        <input type="text" id="search" name="search" placeholder="Type to search...">
+      </form><!-- /users-search -->
+
       <table id="users-table">
         <thead>
           <tr>
@@ -37,16 +44,17 @@
           </tr>
         </thead>
         <tbody id="users-table__body"></tbody>
-      </table><!-- /#users-table -->
-    </div><!-- /#users -->
+      </table><!-- /users-table -->
+
+    </div><!-- /users -->
   
-  </div>
+  </div><!-- /container -->
 </main><!-- /main -->
 
-<footer class="text-right">
+<footer class="footer">
   <div class="container">
-    <h4>An Experiment By:</h4>
-    <a href="http://callmenick.com">callmenick.com</a>
+    <h4 class="footer__footnote">An Experiment By:</h4>
+    <a class="footer__me" href="http://callmenick.com">callmenick.com</a>
   </div>
 </footer>
 
@@ -63,7 +71,7 @@
 <script src="js/lib/backbone.js"></script>
 <script src="js/app.js"></script>
 
-<!-- EXTERNAL SCRIPTS FOR CALLMENICK.COM, PLEASE DO NOT INCLUDE -->
+<!-- EXTERNAL SCRIPTS FOR CALLMENICK.COM, PLEASE DO NOT INCLUDE 
 <script async src="js/external/carbonad.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -73,6 +81,7 @@
   ga('create', 'UA-34160351-1', 'auto');
   ga('send', 'pageview');
 </script>
+-->
 <!-- /EXTERNAL SCRIPTS -->
 
 </body>
