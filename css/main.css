@@ -84,8 +84,11 @@ p {
 ----------------------------------------------------------------------------- */
 
 table {
+  table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
+  border: solid 1px #ddd;
+  word-wrap: break-word;
 }
 
 thead tr {
@@ -103,8 +106,8 @@ tbody tr:last-child {
 th,
 td {
   padding: 12px;
+  width: 33.3333%;
   text-align: left;
-  
 }
 
 th {
