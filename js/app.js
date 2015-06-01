@@ -50,7 +50,8 @@ var UsersView = Backbone.View.extend({
   el: '#users',
 
   events: {
-    'change #sort': 'sortCollection'
+    'change #sort': 'sortCollection',
+    'keyup #search': 'filterCollection'
   },
 
   initialize: function() {
@@ -74,6 +75,20 @@ var UsersView = Backbone.View.extend({
   sortCollection: function(e) {
     Users.comparator = e.target.value;
     Users.sort();
+  },
+
+  filterCollection: function(e) {
+    var searchString = e.target.value.toLowerCase();
+
+    var filtered = Users.filter(function(item) {
+      return item.get('firstname').toLowerCase().indexOf(searchString) >= 0;
+    });
+
+    console.log(Users.length, filtered.length);
+
+    // Users = new Backbone.Collection(filteredUsers);
+    // Users.reset();
+    // Users.reset(filteredUsers);
   }
 
 });
