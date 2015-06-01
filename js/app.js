@@ -120,7 +120,15 @@ var UsersView = Backbone.View.extend({
     var str = e.target.value.toLowerCase();
 
     var filteredResults = this.collection.filter(function(item) {
-      return item.get('firstname').toLowerCase().indexOf(str) >= 0;
+      var fnameMatch = item.get('firstname').toLowerCase().indexOf(str);
+      var lnameMatch = item.get('lastname').toLowerCase().indexOf(str);
+      var emailMatch = item.get('email').toLowerCase().indexOf(str);
+
+      if (fnameMatch >= 0 || lnameMatch >= 0 || emailMatch >= 0) {
+        return true;
+      } else {
+        return false;
+      }
     });
 
     this.collection.filteredCollection.reset(filteredResults);
